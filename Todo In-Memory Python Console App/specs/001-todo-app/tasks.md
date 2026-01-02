@@ -28,8 +28,8 @@ description: "Task list for Todo Application implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize Python 3.13+ project with pyproject.toml
+- [x] T001 Create project structure per implementation plan
+- [x] T002 Initialize Python 3.13+ project with pyproject.toml
 - [x] T003 [P] Create directory structure (src/, tests/, src/models/, src/services/, src/cli/)
 
 ---
