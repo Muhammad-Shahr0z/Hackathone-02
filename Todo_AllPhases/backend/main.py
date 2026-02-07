@@ -19,10 +19,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://hackathone-02-rox.vercel.app"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_credentials=False,  # important with "*"
+    allow_credentials=True,  # credentials ke liye True
 )
 
 # --------------------------------------------------------------------
