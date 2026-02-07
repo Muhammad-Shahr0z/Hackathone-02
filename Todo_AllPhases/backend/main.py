@@ -19,7 +19,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://ai-spec-driven-online-hackathon-ll-one.vercel.app"],
+    allow_origins=["http://localhost:3000", "https://hackathone-02-amber.vercel.app"],
     allow_methods=["GET", "POST", "DELETE", "OPTIONS", "PUT"],
     allow_headers=["*"],
     allow_credentials=True,
