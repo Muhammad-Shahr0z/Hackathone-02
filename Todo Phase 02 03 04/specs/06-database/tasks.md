@@ -27,8 +27,8 @@ description: "Task list for Database (Neon PostgreSQL) feature implementation"
 **Purpose**: Configure database connectivity for Neon PostgreSQL.
 *Assumes general project setup is complete.*
 
-- [ ] T001 Install `asyncpg` (or `psycopg2-binary`) in `backend/` for PostgreSQL connectivity
-- [ ] T002 Configure database connection string (e.g., `DATABASE_URL`) in `backend/.env`
+ - [x] T001 Install `asyncpg` (or `psycopg2-binary`) in `backend/` for PostgreSQL connectivity
+ - [x] T002 Configure database connection string (e.g., `DATABASE_URL`) in `backend/.env`
 
 ---
 
@@ -37,11 +37,11 @@ description: "Task list for Database (Neon PostgreSQL) feature implementation"
 **Purpose**: Establish core database interaction and migration framework.
 *Assumes SQLModel is already installed.*
 
-- [ ] T003 Define `Base` for SQLModel models and database engine in `backend/src/db/base.py`
-- [ ] T004 Implement dependency for managing database sessions in `backend/src/dependencies.py`
-- [ ] T005 Initialize Alembic for database migrations in `backend/`
-- [ ] T006 [P] Ensure `User` model (`backend/src/models/user.py`) has `id` as primary key and any required relationships (from 02-authentication plan)
-- [ ] T007 [P] Define `Task` model with `id`, `title`, `description`, `completed`, `created_at`, `updated_at`, and `user_id` linked to `User` model (foreign key) in `backend/src/models/task.py`
+ - [x] T003 Define `Base` for SQLModel models and database engine in `backend/src/db/base.py`
+ - [x] T004 Implement dependency for managing database sessions in `backend/src/dependencies.py`
+ - [x] T005 Initialize Alembic for database migrations in `backend/`
+ - [x] T006 [P] Ensure `User` model (`backend/src/models/user.py`) has `id` as primary key and any required relationships (from 02-authentication plan)
+ - [x] T007 [P] Define `Task` model with `id`, `title`, `description`, `completed`, `created_at`, `updated_at`, and `user_id` linked to `User` model (foreign key) in `backend/src/models/task.py`
 
 **Checkpoint**: Core database interaction framework and models ready.
 
@@ -57,17 +57,17 @@ description: "Task list for Database (Neon PostgreSQL) feature implementation"
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T008 [P] [US1] Write unit tests for `Task` model definition and relationships in `backend/tests/models/test_task.py`
-- [ ] T009 [P] [US1] Write integration tests for database connection and session management in `backend/tests/db/test_connection.py`
-- [ ] T010 [P] [US1] Write integration tests for task CRUD operations via SQLModel with data persistence verification in `backend/tests/services/test_task_persistence.py`
-- [ ] T011 [P] [US1] Write integration test to verify data integrity rules (e.g., foreign key constraints) in `backend/tests/db/test_data_integrity.py`
+ - [x] T008 [P] [US1] Write unit tests for `Task` model definition and relationships in `backend/tests/models/test_task.py`
+ - [x] T009 [P] [US1] Write integration tests for database connection and session management in `backend/tests/db/test_connection.py`
+ - [x] T010 [P] [US1] Write integration tests for task CRUD operations via SQLModel with data persistence verification in `backend/tests/services/test_task_persistence.py`
+ - [x] T011 [P] [US1] Write integration test to verify data integrity rules (e.g., foreign key constraints) in `backend/tests/db/test_data_integrity.py`
 
 ### Implementation for User Story 1
 
-- [ ] T012 [US1] Create initial Alembic migration script for `User` and `Task` tables in `backend/alembic/versions/`
-- [ ] T013 [US1] Apply the database migration to create tables
-- [ ] T014 [US1] Implement `create_task`, `get_tasks`, `get_task`, `update_task`, `delete_task` methods in `backend/src/services/task_service.py` using SQLModel sessions
-- [ ] T015 [US1] Ensure all task operations enforce user ownership by filtering queries with `user_id` in `backend/src/services/task_service.py`
+ - [x] T012 [US1] Create initial Alembic migration script for `User` and `Task` tables in `backend/alembic/versions/`
+ - [x] T013 [US1] Apply the database migration to create tables
+ - [x] T014 [US1] Implement `create_task`, `get_tasks`, `get_task`, `update_task`, `delete_task` methods in `backend/src/services/task_service.py` using SQLModel sessions
+ - [x] T015 [US1] Ensure all task operations enforce user ownership by filtering queries with `user_id` in `backend/src/services/task_service.py`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
